@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "creategrog:block/beer_mug_block"
+    },
+    "facing=south": {
+      "model": "creategrog:block/beer_mug_block",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "creategrog:block/beer_mug_block",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "creategrog:block/beer_mug_block",
+      "y": 270
+    }
+  }
+}

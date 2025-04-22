@@ -1,36 +1,39 @@
 package net.makozort.creategrog.content.item;
 
-import net.makozort.creategrog.handler.DrunkHandler;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.level.Level;
 
-public class BeerMug extends Item {
+import net.makozort.creategrog.reg.Allblocks;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+
+
+public class BeerMug extends AbstractDrinkItem {
+
     public BeerMug(Properties properties) {
         super(properties);
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.DRINK;
+    public Block getBlockVersion() {
+        return Allblocks.BEER_MUG.get();
+    }
+
+    @Override
+    public SoundEvent getPlaceSound() {
+        return SoundEvents.WOOD_PLACE;
+    }
+
+
+    @Override
+    public double getPotency() {
+        return .15;
     }
 
     @Override
     public int getUseDuration(ItemStack stack, LivingEntity entity) {
         return 30;
-    }
-
-    @Override
-    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
-        if (!level.isClientSide && entity instanceof Player player) {
-            DrunkHandler.increaseDrunk(player, 0.15); // Only apply once
-        }
-
-        return super.finishUsingItem(stack, level, entity);
     }
 }
 

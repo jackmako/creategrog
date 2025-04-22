@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "creategrog:beer_mug_full"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "creategrog:blocks/beer_mug_block"
+}

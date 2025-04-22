@@ -35,7 +35,7 @@ public class ClientDrunkHandler {
         int tick = player.tickCount;
 
         // === TWEAKABLE DRUNK EFFECT CHANCES (0.0 to 1.0) ===
-        double fakeSneakChance = 0.10;
+        double fakeSneakChance = 0.01;
 
         // === CAMERA DRIFT SCALING ===
         double baseWobble = 0.3 + (amplifier * 0.2);  // more vertical wobble per level

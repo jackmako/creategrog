@@ -1,5 +1,5 @@
 {
   "item.creategrog.beer_mug_full": "Beer Mug",
-
+  "item.creategrog.beer_mug_empty": "Beer Mug (empty)",
   "effect.creategrog.drunk_effect": "Drunk"
 }

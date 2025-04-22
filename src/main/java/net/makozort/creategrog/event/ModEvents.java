@@ -33,7 +33,7 @@ public class ModEvents {
     @SubscribeEvent
     public void onLiving(PlayerTickEvent.Pre event) {
         Player p = event.getEntity();
-        CreateGrog.LOGGER.info(Double.toString(DrunkHandler.getDrunkLevel(p)));
+        //CreateGrog.LOGGER.info(Double.toString(DrunkHandler.getDrunkLevel(p)));
 
         if (!p.level().isClientSide && DrunkHandler.isDrunk(p)) {
             double current = DrunkHandler.getDrunkLevel(p);
